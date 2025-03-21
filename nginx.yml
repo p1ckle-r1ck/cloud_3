@@ -1,0 +1,11 @@
+#cloud-config
+users:
+  - name: admin1
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG5Kzn0xA3mea/L/yEJX4NyNxAD/1HZE79V+HF+1kqP5 marsel.valiev@MacBook-Air-Marsel.local
+
+runcmd:
+  -  echo '<p>hostname is:' "$(hostname)" '</p><br><a href="https://imag-netology116132.website.yandexcloud.net">Link</a>' >  /var/www/html/index.html 
